@@ -1,0 +1,92 @@
+@import 'variables';
+
+.footer {
+    .container {
+        background-color: $black-color;
+        color: $white-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+
+        .footer__info-left {
+            width: 170px;
+
+            & img {
+                transform: translate(-15%);
+                width: 150px;
+                margin-bottom: 20px;
+            }
+
+            & p {
+                margin-bottom: 10px;
+                font-size: 13px;
+            }
+
+            & h5 {
+                margin-bottom: 20px;
+                font-size: 13px;
+            }
+
+            .payment {
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & img {
+                    width: 40px;
+                    margin: 0;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .footer__info-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 70%;
+            .clients {
+                & p{
+                    font-size: 14px;
+                    padding: 10px 0 10px;
+                }
+                & img {
+                    width: 30px;
+                    height: 30px;
+                    transition: .2s ease;
+                    margin-right: 7px;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .catalog,
+            .clients,
+            .contacts,
+            .location {
+                width: 150px;
+                & .title, .location__title {
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: darken(red, 12%);
+                    padding-bottom: 10px;
+                }
+                & a {
+                    color: $white-color;
+                    font-size: 10px;
+                    transition: .2s ease;
+                    &:hover {
+                        color: lighten($orange-color, 2%)
+                    }
+                }
+                & li {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+}
