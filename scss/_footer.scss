@@ -64,6 +64,44 @@
                     }
                 }
             }
+            .contacts li {
+                position: relative;
+            }
+            .contacts li:first-child::before {
+                position: absolute;
+                content: "";
+                background-image: url(../img/footer-img/phone-ico.png);
+                background-size: cover;
+                width: 20px;
+                height: 20px;
+                top: 0;
+                left: -26px;
+            }
+            .contacts li:nth-of-type(5):before {
+                position: absolute;
+                content: "";
+                background-image: url(../img/footer-img/message-ico.png);
+                background-size: cover;
+                width: 40px;
+                height: 40px;
+                top: -10px;
+                left: -37px;
+            }
+            .location {
+                & a:nth-of-type(1){
+                    position: relative;
+                }
+                & a:nth-of-type(1)::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../img/footer-img/location-ico.png);
+                    background-size: cover;
+                    width: 20px;
+                    height: 20px;
+                    top: -4px;
+                    left: -21px;
+                }
+            }
             .catalog,
             .clients,
             .contacts,

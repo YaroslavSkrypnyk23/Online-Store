@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'mixins';
+
+
 *,
 *::before,
 *::after {
@@ -8,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    transition: background 0.3s ease;
 }
 
 .container {
@@ -19,6 +24,9 @@ body {
 }
 a {
     text-decoration: none;
+    color: $black-color;
 }
+
+
 
 
