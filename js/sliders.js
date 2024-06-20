@@ -1,16 +1,6 @@
+import {renderProducts} from './render.js'
 import { getProducts } from './api.js';
-//Рендеримо продукти для обох слайдерів
-const renderProducts = async () => {
-    try {
-        const products = await getProducts();
-        if (!products) {
-            throw new Error('No products found');
-        }
-        return products;
-    } catch (error) {
-        console.error(`Error: ${error}`);
-    }
-};
+
 //функція для верхнього слайдера
 const productsForTopSlider = async () => {
     const products = await renderProducts();
