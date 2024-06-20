@@ -1,4 +1,4 @@
-function addToCart(product) {
+export function addToCart(product) {
     if (!product) {
         console.error("Product not found");
         return;
