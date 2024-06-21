@@ -1,5 +1,5 @@
-import {renderProducts} from './render.js'
 import { getProducts } from './api.js';
+import {renderProducts} from './render.js'
 import { addToCart } from './cart.js';
 
 //функція для верхнього слайдера

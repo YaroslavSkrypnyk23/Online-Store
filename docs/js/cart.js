@@ -74,7 +74,6 @@ export function addToCart(product) {
     updateCartCounter();
     isCartEmpty();
 }
-
 // Функція для оновлення кількості товарів у кошику
 function updateCartCounter() {
     const products = document.querySelectorAll('.product');
@@ -157,12 +156,12 @@ const siteBackground = document.body;
 const overlay = document.querySelector('#overlay');
 //Зміна іконки кошика по наведенню курсора 
 cartIcon.addEventListener('mouseover', () => {
-    cartIcon.src = '../img/header-img/cart-ico-hover.png';
+    cartIcon.src = './img/header-img/cart-ico-hover.png';
     cartIcon.style.transform = 'scale(1.5)';
 });
 //Зміна іконки кошика по виведенню курсора
 cartIcon.addEventListener('mouseout', () => {
-    cartIcon.src = '../img/header-img/cart-ico-single.png';
+    cartIcon.src = './img/header-img/cart-ico-single.png';
     cartIcon.style.transform = 'scale(1)';
 });
 //Відкрити кошик
