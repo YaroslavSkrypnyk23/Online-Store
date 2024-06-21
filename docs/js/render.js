@@ -1,5 +1,4 @@
-import { getProducts } from "./api";
-
+import { getProducts } from "./api.js";
 export const renderProducts = async () => {
     try {
         const products = await getProducts();
