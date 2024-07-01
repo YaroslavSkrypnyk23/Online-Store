@@ -1,0 +1,46 @@
+.custom-product-image {
+    width: 100%;
+    height: 200px;
+    margin: 15px 0;
+    object-fit: contain;
+}
+
+.custom-product-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-product-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card {
+    height: 600px;
+    transition: all .3s ease;
+}
+
+.card-body {
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.card-body:hover {
+    background: rgba(148, 220, 240, 0.253);
+    cursor: pointer;
+}
+
+.product-item {
+    margin-bottom: 20px;
+    /* Відступ між картками */
+}
+
+.btn-width {
+    width: 46%;
+}

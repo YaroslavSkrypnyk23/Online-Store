@@ -7,7 +7,8 @@
     <title>Online Store</title>
     <link rel="shortcut icon" href="./img/header-img/store-ico.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="./scss/main.css">
 </head>
 
@@ -35,16 +36,7 @@
                 </div>
                 <div class="header__bottom bottom">
                     <ul class="bottom__navbar">
-                        <li class="bottom__nav-item dropdown">
-                            <a href="#catalog" class="bottom__nav-link">Каталог</a>
-                            <div class="dropdown__content">
-                                <a href="#allcategories" class="dropdown__link">Усі товари</a>
-                                <a href="#category1" class="dropdown__link">Електроніка</a>
-                                <a href="#category2" class="dropdown__link">Косметика</a>
-                                <a href="#category3" class="dropdown__link">Чоловічий одяг</a>
-                                <a href="#category4" class="dropdown__link">Жіночий одяг</a>
-                            </div>
-                        </li>
+                        <li class="bottom__nav-item"><a href="category.html" class="bottom__nav-link">Категорії</a></li>
                         <li class="bottom__nav-item"><a href="#about" class="bottom__nav-link">Про магазин</a></li>
                         <li class="bottom__nav-item"><a href="#payment" class="bottom__nav-link">Оплата</a></li>
                         <li class="bottom__nav-item"><a href="#delivery" class="bottom__nav-link">Доставка</a></li>
@@ -52,13 +44,13 @@
                         <li class="bottom__nav-item"><a href="#contacts" class="bottom__nav-link">Контакти</a></li>
                     </ul>
                     <div class="bottom__medias">
-                        <a href="#"><img src="./img/header-img/facebook-ico.png" alt="facebook icon"
-                                class="bottom__media-icon" width="40"></a>
-                        <a href="#"><img src="./img/header-img/instagram_ico.png" alt="instagram icon"
-                                class="bottom__media-icon" width="40"></a>
-                        <a href="#"><img src="./img/header-img/telegram-ico.png" alt="telegram icon"
-                                class="bottom__media-icon" width="40"></a>
-                        <a href="#"><img src="./img/header-img/viber-ico.png" alt="viber icon"
+                        <a href="https://www.facebook.com/?locale=uk_UA"><img src="./img/header-img/facebook-ico.png"
+                                alt="facebook icon" class="bottom__media-icon" width="40"></a>
+                        <a href="https://www.instagram.com/"><img src="./img/header-img/instagram_ico.png"
+                                alt="instagram icon" class="bottom__media-icon" width="40"></a>
+                        <a href="https://www.telegram.com/"><img src="./img/header-img/telegram-ico.png"
+                                alt="telegram icon" class="bottom__media-icon" width="40"></a>
+                        <a href="https://www.viber.com/"><img src="./img/header-img/viber-ico.png" alt="viber icon"
                                 class="bottom__media-icon" width="40"></a>
                     </div>
                     <div class="user-login">
@@ -156,7 +148,7 @@
                 <div class="clients">
                     <h3 class="clients__title title">Клієнтам</h3>
                     <ul class="clients__list list">
-                        <li><a href="#">Вхід в особистий кабіен</a></li>
+                        <li><a href="#">Вхід в особистий кабінет</a></li>
                         <li><a href="#">Оплата і доставка</a></li>
                         <li><a href="#">Гарантія</a></li>
                         <li><a href="#">Контактна інформація</a></li>
@@ -208,6 +200,8 @@
             <button class="close-btn" type="button"></button>
         </div>
     </div>
+    <!-- контейнер для сторінки обраних товарів -->
+    <div class="heart"></div>
     <!-- Затемнення заднього фону -->
     <div id="overlay"></div>
 
@@ -221,6 +215,7 @@
     <script type="module" src="js/app.js"></script>
     <script type="module" src="js/heart.js"></script>
     <script type="module" src="js/cart.js"></script>
+    <!-- <script type="module" src="js/category.js"></script> -->
 </body>
 
 </html>

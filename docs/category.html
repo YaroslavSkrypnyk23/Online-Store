@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Категорії</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary container mb-2" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Головна</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Категорії</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Оплата</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Доставка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакти</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-secondary me-4" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Особистий кабінет</button>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder=" Я шукаю..." aria-label="Search"
+                            list="suggestions">
+                        <datalist id="suggestions"></datalist>
+                        <button class="btn btn-outline-success searchButton" type="button" id="button-addon2">Пошук</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Вхід в особистий кабінет</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="px-4 py-3">
+                    <div class="mb-3">
+                        <label for="exampleDropdownFormEmail1" class="form-label">Електронна пошта</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                            placeholder="email@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDropdownFormPassword1" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                            placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Запам'ятати мене
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Увійти</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-primary text-decoration-underline" href="#">Ще немає
+                        аккаунта?Зареєструйтесь!</a>
+                    <a class="dropdown-item text-primary" href="#">Забули пароль?</a>
+                </form>
+            </div>
+        </div>
+        <div class="navbar navbar-expand-lg bg-warning container mb-4 d-flex justify-content-between gap-5">
+            <div class="navbar-selectors d-flex gap-2 ms-2">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Категорія
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item active category-dropdown" href="#">Усі товари</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item category-dropdown" href="#">Чоловічий одяг</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item category-dropdown" href="#">Жіночий одяг</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item category-dropdown" href="#">Коштовності</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item category-dropdown" href="#">Електроніка</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="priceDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ціна
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="priceDropdown">
+                        <li><a class="dropdown-item price-dropdown" href="#">Спочатку дешеві</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item price-dropdown" href="#">Спочатку дорогі</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item price-dropdown" href="#">Від найбільшої знижки</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item price-dropdown" href="#">Від найменшої знижки</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="ratingDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Рейтинг
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="ratingDropdown">
+                        <li><a class="dropdown-item rating-dropdown" href="#">Від найвищого рейтингу</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item rating-dropdown" href="#">Від найнижчого рейтингу</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item rating-dropdown" href="#">Від найпопулярніших</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item rating-dropdown" href="#">Від найменш популярних</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="navbar-medias d-flex gap-1 me-5">
+                    <a href="https://www.facebook.com/?locale=uk_UA"><img src="./img/header-img/facebook-ico.png"
+                            alt="facebook icon" class="mx-2 img-fluid" width="25"></a>
+                    <a href="https://www.instagram.com/"><img src="./img/header-img/instagram_ico.png"
+                            alt="instagram icon" class="mx-2 img-fluid" width="25"></a>
+                    <a href="https://www.telegram.com/"><img src="./img/header-img/telegram-ico.png" alt="telegram icon"
+                            class="mx-2 img-fluid" width="25"></a>
+                </div>
+                <div class="navbar-images d-flex justify-content-between">
+                    <img id="cart-icon" class="mx-1" src="./img/header-img/cart-ico-single.png" width="25"
+                        alt="cart icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <img class="mx-2" src="./img/header-img/heart-ico-single.png" width="25" alt="choosen products icon"
+                        data-bs-toggle="modal" data-bs-target="#heartModal">
+                </div>
+            </div>
+        </div>
+        <!-- Модальне вікно для кошика -->
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title" id="cartModalLabel">Ваш кошик</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="empty-text">Ваш кошик поки що порожній.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-primary">Перейти до оформлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Модальне вікно для обраних товарів -->
+        <div class="modal fade" id="heartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title" id="cartModalLabel">Обрані товари</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="heart__empty-text">Ви поки що нічого не обрали,але це не пізно виправити:)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-primary">Перейти до оформлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="bg-light bg-gradient container">
+            <div class="row products__container">
+            </div>
+        </div>
+        <!-- Модальне вікно для невірного товару -->
+        <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="errorModalLabel">Упс, щось пішло не так!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>На жаль, даного товару у нас у асортименті поки що немає.Зазирніть до нас пізніше!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Зрозуміло</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальне вікно для знайденого товару -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Інформація про товар</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Інформація про товар -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success buy-btn" data-bs-dismiss="modal">Додати в
+                            кошик</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container sticky-top bg-dark text-white py-4">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Про нас</h5>
+                <p>Ми пропонуємо широкий асортимент товарів високої якості. Завітайте до нас, щоб знайти все
+                    необхідне!</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Контакти</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-white text-decoration-none"
+                            href="https://maps.app.goo.gl/Gd17UBasp8iYbUbQ6">Адреса: вул. Центральна, 123, Київ,
+                            Україна</a></li>
+                    <li><a class="text-white text-decoration-none" href="tel:+80(44)123-45-67">Телефон: +380 (44)
+                            123-45-67</a></li>
+                    <li><a class="text-white text-decoration-none" href="mailto:info@example.com">Email:
+                            info@example.com</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Корисні посилання</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Про компанію</a></li>
+                    <li><a href="#" class="text-white">Політика конфіденційності</a></li>
+                    <li><a href="#" class="text-white">Умови використання</a></li>
+                    <li><a href="#" class="text-white">Зворотній зв'язок</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Слідкуйте за нами</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/?locale=uk_UA" class="text-white">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/?locale=uk_UA" class="text-white">Instagram</a></li>
+                    <li><a href="https://www.twitter.com/?locale=uk_UA" class="text-white">Twitter</a></li>
+                    <li><a href="https://www.youTube.com/?locale=uk_UA" class="text-white">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Всі права захищені. Basic Online Store</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/render.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/category.js"></script>
+</body>
+
+</html>
