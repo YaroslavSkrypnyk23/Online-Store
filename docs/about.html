@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/about.css">
+</head>
+
+<body>
+    <header class="header container">
+        <nav class="navbar sticky-top  navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Головна</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="category.html">Категорії</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bolder" href="#" role="button" aria-expanded="false">Про
+                                нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Оплата</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Доставка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакти</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-secondary me-4" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Особистий кабінет</button>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder=" Я шукаю..." aria-label="Search"
+                            list="suggestions">
+                        <datalist id="suggestions"></datalist>
+                        <button class="btn btn-outline-success searchButton" type="button"
+                            id="button-addon2">Пошук</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Вхід в особистий кабінет</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="px-4 py-3">
+                    <div class="mb-3">
+                        <label for="exampleDropdownFormEmail1" class="form-label">Електронна пошта</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                            placeholder="email@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleDropdownFormPassword1" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                            placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Запам'ятати мене
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Увійти</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-primary text-decoration-underline" href="#">Ще немає
+                        аккаунта?Зареєструйтесь!</a>
+                    <a class="dropdown-item text-primary" href="#">Забули пароль?</a>
+                </form>
+            </div>
+        </div>
+        <!-- Модальне вікно для кошика -->
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title" id="cartModalLabel">Ваш кошик</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="empty-text">Ваш кошик поки що порожній.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-primary">Перейти до оформлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Модальне вікно для обраних товарів -->
+        <div class="modal fade" id="heartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title" id="cartModalLabel">Обрані товари</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
+                            aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="heart__empty-text">Ви поки що нічого не обрали,але це не пізно виправити:)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-primary">Перейти до оформлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    </div>
+    <main class="main">
+        <div class="container">
+            <section class="about">
+                <div class="about-content">
+                    <h1 class="about-title">Дізнайся більше про нас</h1>
+                    <p class="hero-text">Відкрились та успішно працюємо з 2004 року</p>
+                    <button class="call-btn"><a href="tel:+(451)350-3922">Зателефонувати (451)350-3922</a></button>
+                </div>
+                <div class="about-logo">
+                    <p class="bg-logo">About Us</p>
+                </div>
+            </section>
+            <section class="hero">
+                <div class="hero__left-content">
+                    <div class="img-left">
+                        <img src="./img/about.img/gadgets.jfif" alt="gadgets-image">
+                        <img src="./img/about.img/jewellery.jpg" alt="jewellery-images">
+                    </div>
+                    <div class="img-right">
+                        <img src="./img/about.img/men-clotses.jfif" alt="men-clotses-image">
+                        <img src="./img/about.img/women-clothes.jfif" alt="women-clothes-image">
+                    </div>
+                </div>
+                <div class="hero__right-content">
+                    <p class="foundation">Працюємо з 2004 року</p>
+                    <h2 class="hero-title">Найкращі Товари Для Вашого<br> Стилю Та Комфорту</h2>
+                    <p class="hero-description">
+                        Наш магазин пропонує широкий вибір найсучасніших гаджетів, які задовольнять потреби навіть
+                        найвибагливіших користувачів. Ми маємо великий асортимент коштовностей, що підкреслить вашу
+                        індивідуальність та додасть шарму вашому образу. У нас ви знайдете стильний одяг від відомих
+                        брендів, який допоможе вам виглядати бездоганно у будь-якій ситуації. Наша продукція відповідає
+                        найвищим стандартам якості та модних тенденцій. Ми працюємо з найкращими постачальниками, щоб
+                        гарантувати вам надійність та довговічність товарів. Обираючи наш магазин, ви отримуєте не лише
+                        товар, але й професійне обслуговування. Наші консультанти завжди готові допомогти вам з вибором
+                        та відповісти на всі ваші питання. Ми прагнемо зробити ваш шопінг максимально комфортним та
+                        приємним. Долучайтеся до нашої спільноти задоволених клієнтів та переконайтеся в цьому самі!
+                    </p>
+                    <h4 class="hero-subtitle">Ваш комфорт та стиль - наш пріоритет. Обирайте найкраще разом з нами!</h4>
+                    <p class="hero-description sub-descr">
+                        Ми постійно оновлюємо асортимент, щоб ви могли завжди знайти найактуальніші новинки. Підпишіться
+                        на наші новини, щоб бути в курсі всіх спеціальних пропозицій та акцій. Ми цінуємо кожного нашого
+                        клієнта та завжди готові запропонувати індивідуальний підхід.
+                    </p>
+                </div>
+            </section>
+            <section class="workprocess ">
+                <h2 class="workprocess-title text-center">Чим Ми Займаємось</h2>
+                <div class="row d-flex justify-content-around">
+                    <div class="col-3">
+                        <div class="info">
+                            <h3 class="info-title">Вибір електроніки</h3>
+                            <p class="info-text">Наш онлайн магазин пропонує широкий асортимент електроніки від
+                                провідних брендів. Від смартфонів та ноутбуків до сучасних гаджетів, ми маємо все, що
+                                вам потрібно. Наші продукти відповідають найвищим стандартам якості. Ми гарантуємо
+                                конкурентоспроможні ціни та швидку доставку. Підтримка клієнтів доступна 24/7.</p>
+                            <div class="learn-btn">Дізнатись більше</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="info">
+                            <h3 class="info-title">Розкішні коштовності</h3>
+                            <p class="info-text">Наш асортимент коштовностей включає в себе витончені прикраси від
+                                відомих дизайнерів. Від елегантних каблучок до витончених сережок, ви знайдете ідеальний
+                                подарунок для особливих моментів. Кожен виріб створений з найкращих матеріалів і є
+                                справжнім шедевром. Ми пропонуємо безкоштовну доставку та гарантію якості на всі товари.
+                                Зробіть свій вибір сьогодні.</p>
+                            <div class="learn-btn">Дізнатись більше</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="info">
+                            <h3 class="info-title">Чоловічий одяг</h3>
+                            <p class="info-text">У нашому магазині ви знайдете стильний та комфортний чоловічий одяг від
+                                провідних брендів. Від класичних костюмів до спортивного одягу, ми пропонуємо лише
+                                найкраще. Наш асортимент постійно оновлюється, щоб задовольнити всі ваші потреби. Ми
+                                також пропонуємо знижки та акції на популярні товари. Відчуйте якість та стиль разом з
+                                нами.</p>
+                            <div class="learn-btn">Дізнатись більше</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="info">
+                            <h3 class="info-title">Жіночий одяг</h3>
+                            <p class="info-text">Наш асортимент жіночого одягу включає найновіші колекції відомих
+                                дизайнерів. Від модних суконь до зручного повсякденного одягу, ми маємо все, щоб ви
+                                виглядали бездоганно. Наші товари виготовлені з високоякісних матеріалів і відповідають
+                                останнім модним тенденціям. Ми також пропонуємо індивідуальні консультації щодо стилю та
+                                підбору одягу. Приєднуйтесь до нашої спільноти модниць.</p>
+                            <div class="learn-btn">Дізнатись більше</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="talk-with">Зв'язатись із менеджером</button>
+            </section>
+            <section class="assortment">
+                <img class="rocet-ico" src="./img/about.img/rocet-ico.png" alt="rocet-ico delivery">
+                <div class="assortment-wrapper">
+                    <h2 class="assortment-title">
+                        Гаджети, Брендовий Одяг,<br> Аксесуари та Коштовності. <br> Здійснимо Усі Ваші Мрії.
+                    </h2>
+                    <p class="assortment-text">
+                        Доставимо Ваше Замовлення Хоч На Марс.
+                    </p>
+                    <button class="call-button"><a href="tel:+(451)350-3922">Зателефонувати (451)350-3922</a></button>
+                </div>
+                <img class="car-delivery__ico" src="./img/about.img/delivery-ico.png" alt="car-deliver ico">
+                <img class="car-delivery__smoke" src="./img/about.img/smoke-cloud-clipart-vector.png"
+                    alt="car-delivery__smoke">
+            </section>
+            <section class="contacts mb-5 d-flex justify-content-evenly">
+                <div class="office contacts-item d-flex flex-column justify-content-between align-items-center">
+                    <img src="./img/about.img/home-ico.png" alt="office-img" class="office-img">
+                    <h2 class="office-title fs-4">Головний офіс</h2>
+                    <p class="office-address"><a href="https://maps.app.goo.gl/NHE3hXHeKWqFUmb8A">вул.Соборна 27,
+                            Вінниця, Україна</a>
+                    </p>
+                </div>
+                <div class="phone contacts-item d-flex flex-column justify-content-between align-items-center">
+                    <img src="./img/about.img/phone-ico.png" alt="phone-img" class="phone-img ">
+                    <h2 class="phone-title fs-4">Зателефонуйте Нам</h2>
+                    <p><a href="tel:+(451)321-3922">(451)321-3922</a></p>
+                </div>
+                <div class="email contacts-item d-flex flex-column justify-content-between align-items-center">
+                    <img src="./img/about.img/mail-ico.png" alt="email-img" class="email-img">
+                    <h2 class="email-title fs-4">Напишіть Нам</h2>
+                    <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer container bg-dark text-white py-4">
+        <div class="row row-top mb-4">
+            <div class="col-md-3">
+                <h5>Про нас</h5>
+                <p>Ми пропонуємо широкий асортимент товарів високої якості. Завітайте до нас, щоб знайти все
+                    необхідне!</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Контакти</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-white text-decoration-none"
+                            href="https://maps.app.goo.gl/Gd17UBasp8iYbUbQ6">Адреса: вул. Центральна, 123, Київ,
+                            Україна</a></li>
+                    <li><a class="text-white text-decoration-none" href="tel:+80(44)123-45-67">Телефон: +380 (44)
+                            123-45-67</a></li>
+                    <li><a class="text-white text-decoration-none" href="mailto:info@example.com">Email:
+                            info@example.com</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Корисні посилання</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Про компанію</a></li>
+                    <li><a href="#" class="text-white">Політика конфіденційності</a></li>
+                    <li><a href="#" class="text-white">Умови використання</a></li>
+                    <li><a href="#" class="text-white">Зворотній зв'язок</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Слідкуйте за нами</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/?locale=uk_UA" class="text-white">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/?locale=uk_UA" class="text-white">Instagram</a></li>
+                    <li><a href="https://www.twitter.com/?locale=uk_UA" class="text-white">Twitter</a></li>
+                    <li><a href="https://www.youTube.com/?locale=uk_UA" class="text-white">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Всі права захищені. Basic Online Store</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/about.js"></script>
+
+</body>
+
+</html>

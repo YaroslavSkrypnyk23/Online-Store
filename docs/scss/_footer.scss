@@ -128,3 +128,152 @@
         }
     }
 }
+
+@media(max-width:877px){
+    .footer {
+        .container {
+            background-color: $black-color;
+            color: $white-color;
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+            padding: 15px;
+    
+            .footer__info-left {
+                width: 110px;
+    
+                & img {
+                    transform: translate(-15%);
+                    width: 120px;
+                    margin-bottom: 10px;
+                }
+    
+                & p {
+                    margin-bottom: 10px;
+                    font-size: 10px;
+                }
+    
+                & h5 {
+                    margin-bottom: 20px;
+                    font-size: 10px;
+                }
+    
+                .payment {
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    & img {
+                        width: 30px;
+                        margin: 0;
+    
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+    
+            .footer__info-right {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                width: 80%;
+                .catalog{
+                    display: none;
+                }
+                .clients {
+                    & p{
+                        font-size: 10px;
+                        padding: 10px 0 10px;
+                    }
+                    & img {
+                        width: 20px;
+                        height: 20px;
+                        transition: .2s ease;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:607px){
+    .footer {
+        .container {
+            background-color: $black-color;
+            color: $white-color;
+            display: flex;
+            justify-content: start;
+            // gap: 20px;
+            padding: 15px;
+    
+            .footer__info-left {
+                width: 110px;
+    
+                & img {
+                    transform: translate(-15%);
+                    width: 120px;
+                    margin-bottom: 10px;
+                }
+    
+                & p {
+                    margin-bottom: 10px;
+                    font-size: 10px;
+                }
+    
+                & h5 {
+                    margin-bottom: 20px;
+                    font-size: 10px;
+                }
+    
+                .payment {
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    & img {
+                        width: 30px;
+                        margin: 0;
+    
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+    
+            .footer__info-right {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 20px;
+                width: 80%;
+                .catalog{
+                    display: none;
+                }
+                .clients {
+                    & p{
+                        font-size: 10px;
+                        padding: 10px 0 10px;
+                    }
+                    & img {
+                        width: 20px;
+                        height: 20px;
+                        transition: .2s ease;
+                        margin-right: 7px;
+                    }
+                }
+                .catalog, .clients {
+                    max-width: 150px;
+                    width: 100%;
+
+                }
+                .location{
+                    display: none;
+                }
+            }
+        }
+    }
+}
