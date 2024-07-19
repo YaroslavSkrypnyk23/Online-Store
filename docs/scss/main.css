@@ -1574,7 +1574,7 @@ table {
   }
   .top-slider .top-slider__wrapper .top-slider__item {
     width: 90%;
-    height: 250px;
+    height: 200px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -1999,7 +1999,7 @@ table {
   }
   .top-slider .top-slider__wrapper .top-slider__item {
     width: 90%;
-    height: 250px;
+    height: 170px;
     padding: 20px;
     display: flex;
     align-items: center;
